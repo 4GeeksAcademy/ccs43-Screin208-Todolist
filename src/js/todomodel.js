@@ -1,5 +1,5 @@
 async function getAllTodos(){
-    await fetch('https://assets.breatheco.de/apis/fake/todos/user/ruben17', {
+    await fetch('https://assets.breatheco.de/apis/fake/todos/user/alesanchezr', {
         
         method: "POST",
         body: JSON.stringify([]),
@@ -8,8 +8,7 @@ async function getAllTodos(){
         }
       })
 
-    const response = await fetch('https://assets.breatheco.de/apis/fake/todos/user/ruben17', {
-        
+    const response = await fetch('https://assets.breatheco.de/apis/fake/todos/user/alesanchezr', {
         method: "GET",
         // body: JSON.stringify(todos),
         headers: {
@@ -19,25 +18,11 @@ async function getAllTodos(){
       
       const data = await response.json();
       console.log(data); 
-
-// {label:"Todo here", done: false}
-// map, maps only label here 
-      // return data.map((todoInfo)=>{
-      //   return todoInfo.label;
-      // })
-
       return data;
 }
 
 async function updateTodos(a){
-    // let todoToUpdate = a.map((todoitem)=>{
-    //     return {
-    //         label:todoitem, 
-    //         done:false
-    //     } 
-    //     // return a new object 
-    // })
-    await fetch('https://assets.breatheco.de/apis/fake/todos/user/minerva', {
+    await fetch('https://assets.breatheco.de/apis/fake/todos/user/alesanchezr', {
         
         method: "PUT",
         // body: JSON.stringify(todoToUpdate),
@@ -47,6 +32,5 @@ async function updateTodos(a){
         }
     })
 }
-
 
 export{getAllTodos,updateTodos}
